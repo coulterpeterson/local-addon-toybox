@@ -8,18 +8,23 @@ export default class Toybox extends Component {
 		this.state = {
 			siteStatus: null,
 			siteDomain: null,
-			siteId: null
+			siteId: null,
+			siteName: null
 		};
 	}
 
 	componentDidMount() {
 		let routeChildrenProps = this.props.routeChildrenProps;
-		console.log(routeChildrenProps);
-		// let siteStatus = routeChildrenProps.siteStatus;
-		// let site = routeChildrenProps.site;
-		// let siteDomain = site.domain;
+		let siteStatus = routeChildrenProps.siteStatus;
+		let site = routeChildrenProps.site;
 
-		// let siteId = routeChildrenProps.site.id;
+		let siteDomain = site.domain;
+		let siteName = site.name;
+		let siteId = site.id;
+
+		console.log(
+			siteStatus + " " + siteDomain + " " + siteName + " " + siteId
+		);
 
 		// this.testSiteRootUrlVariantsAndUpdate(siteDomain);
 		// this.updateSiteId(siteId);
