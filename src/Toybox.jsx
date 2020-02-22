@@ -22,18 +22,38 @@ export default class Toybox extends Component {
 		let siteName = site.name;
 		let siteId = site.id;
 
-		console.log(
-			siteStatus + " " + siteDomain + " " + siteName + " " + siteId
-		);
+		this.updateSiteStatus(siteStatus);
+		this.updateSiteDomain(siteDomain);
+		this.updateSiteId(siteId);
+		this.updateSiteName(siteName);
+	}
 
-		// this.testSiteRootUrlVariantsAndUpdate(siteDomain);
-		// this.updateSiteId(siteId);
-		// this.updateSiteState(siteStatus);
+	updateSiteStatus(newStatus) {
+		this.setState(prevState => ({
+			siteStatus: newStatus
+		}));
+	}
+
+	updateSiteDomain(domain) {
+		this.setState(prevState => ({
+			siteDomain: domain
+		}));
+	}
+
+	updateSiteId(id) {
+		this.setState(prevState => ({
+			siteId: id
+		}));
+	}
+
+	updateSiteName(name) {
+		this.setState(prevState => ({
+			siteName: name
+		}));
 	}
 
 	render() {
-		let signUpUrl = "";
-		//let signUpUrl = `https://app.toyboxsystems.com/users/sign_up?flywheel=true&siteName=${site.name}&siteDomain=${site.domain}`;
+		let signUpUrl = `https://app.toyboxsystems.com/users/sign_up?flywheel=true&siteName=${this.state.siteName}&siteDomain=${this.state.siteDomain}`;
 
 		return (
 			<div style={{ flex: 1, overflowY: "auto", padding: 30 }}>
