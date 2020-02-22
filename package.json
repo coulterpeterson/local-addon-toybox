@@ -1,6 +1,6 @@
 {
-	"name": "boilterplate",
-	"productName": "Boilerplate",
+	"name": "toybox",
+	"productName": "Toybox",
 	"version": "1.0.0",
 	"author": "Coulter Peterson",
 	"keywords": [
@@ -8,15 +8,15 @@
 	],
 	"bgColor": "#51bb7b",
 	"icon": "icon.svg",
-	"description": "A quick start to your amazing addon!",
+	"description": "Easily collaborate on your website designs with this Local Toybox integration!",
 	"renderer": "lib/renderer.js",
 	"main": "lib/main.js",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/getflywheel/local-addon-boilerplate"
+		"url": "https://github.com/coulterpeterson/local-addon-toybox"
 	},
 	"bugs": {
-		"url": "https://github.com/getflywheel/local-addon-boilerplate/issues"
+		"url": "https://github.com/coulterpeterson/local-addon-toybox/issues"
 	},
 	"license": "MIT",
 	"scripts": {
