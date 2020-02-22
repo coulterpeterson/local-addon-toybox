@@ -5,11 +5,13 @@ export default function(context) {
 	const { Route } = context.ReactRouter;
 
 	// Create the route/page of content that will be displayed when the menu option is clicked
-	hooks.addContent("routesSiteInfo", () => (
+	hooks.addContent("routesSiteInfo", ({ routeChildrenProps }) => (
 		<Route
 			key="toybox-addon"
 			path="/main/site-info/:siteID/toybox"
-			render={props => <Toybox {...props} />}
+			render={props => (
+				<Toybox {...props} routeChildrenProps={routeChildrenProps} />
+			)}
 		/>
 	));
 
