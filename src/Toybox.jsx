@@ -63,6 +63,7 @@ export default class Toybox extends Component {
 					<a href={signUpUrl}>Create one here for free.</a>
 				</p>
 
+				<input type="text" className="BigInput ToyboxInput" />
 				<InputPasswordToggle
 					onChange={event => console.log("onChange: ", event)}
 				/>
