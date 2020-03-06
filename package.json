@@ -20,8 +20,10 @@
 	},
 	"license": "MIT",
 	"scripts": {
-		"build": "tsc",
-		"watch": "yarn run build --watch"
+		"build": "npm run build:css && tsc",
+		"watch": "npm run watch:css && yarn run build --watch",
+		"build:css": "postcss tailwind.css -o main.css",
+		"watch:css": "postcss tailwind.css -o main.css"
 	},
 	"devDependencies": {
 		"@getflywheel/eslint-config-local": "1.0.4",
@@ -29,9 +31,12 @@
 		"@types/classnames": "^2.2.9",
 		"@types/dateformat": "^3.0.1",
 		"@types/node": "^12.7.12",
+		"autoprefixer": "^9.7.4",
 		"eslint": "^5.0.0",
 		"eslint-plugin-import": "^2.14.0",
 		"eslint-plugin-react": "^7.11.1",
+		"postcss-cli": "^7.1.0",
+		"tailwindcss": "^1.2.0",
 		"typescript": "^3.6.4"
 	},
 	"peerDependencies": {

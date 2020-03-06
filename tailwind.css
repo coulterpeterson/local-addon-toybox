@@ -1,0 +1,9 @@
+@tailwind utilities;
+
+.width-inherit {
+	width: inherit !important;
+}
+
+.height-44px {
+	height: 44px !important;
+}
