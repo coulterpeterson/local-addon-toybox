@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Title, InputPasswordToggle } from "@getflywheel/local-components";
+import { Title, InputPasswordToggle, InputToggle } from "@getflywheel/local-components";
 
 export default class Toybox extends Component {
 	constructor(props) {
@@ -63,9 +63,12 @@ export default class Toybox extends Component {
 					<a href={signUpUrl}>Create one here for free.</a>
 				</p>
 
-				<input
+				{ /*<input
 					type="text"
 					className="BigInput width-inherit height-44px"
+				/> */ }
+				<InputToggle
+					onChange={event => console.log("onChange: ", event)}
 				/>
 				<InputPasswordToggle
 					onChange={event => console.log("onChange: ", event)}
