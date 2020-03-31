@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import {
 	Title,
 	InputPasswordToggle,
-	BasicInput
+	BasicInput,
+	PrimaryButton
 } from "@getflywheel/local-components";
 
 export default class Toybox extends Component {
@@ -88,6 +89,13 @@ export default class Toybox extends Component {
 				<InputPasswordToggle
 					onChange={event => console.log("onChange: ", event)}
 				/>
+
+				<PrimaryButton
+					onClick={() => console.log("Clicked!")}
+					className="mt-10"
+				>
+					Sign In
+				</PrimaryButton>
 			</div>
 		);
 	}
