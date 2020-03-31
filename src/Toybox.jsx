@@ -1,5 +1,9 @@
 import React, { Component } from "react";
-import { Title, InputPasswordToggle, BasicInput } from "@getflywheel/local-components";
+import {
+	Title,
+	InputPasswordToggle,
+	BasicInput
+} from "@getflywheel/local-components";
 
 export default class Toybox extends Component {
 	constructor(props) {
@@ -56,20 +60,31 @@ export default class Toybox extends Component {
 		let signUpUrl = `https://app.toyboxsystems.com/users/sign_up?flywheel=true&siteName=${this.state.siteName}&siteDomain=${this.state.siteDomain}`;
 
 		return (
-			<div style={{ flex: 1, overflowY: "auto", padding: 30 }}>
+			<div
+				style={{ flex: 1, overflowY: "auto", padding: 30 }}
+				className="max-w-2xl"
+			>
 				<Title>Sign into your account</Title>
 				<p>
 					Don't have a Toybox account?{" "}
 					<a href={signUpUrl}>Create one here for free.</a>
 				</p>
 
-				{ /*<input
-					type="text"
-					className="BigInput width-inherit height-44px"
-				/> */ }
+				<Title size="s" className="pb-4">
+					Email
+				</Title>
+
 				<BasicInput
 					onChange={event => console.log("onChange: ", event)}
 				/>
+
+				<Title size="s" className="pb-4">
+					API Key{" "}
+					<a href="https://app.toyboxsystems.com/settings?api=true">
+						Find your key here
+					</a>
+				</Title>
+
 				<InputPasswordToggle
 					onChange={event => console.log("onChange: ", event)}
 				/>
